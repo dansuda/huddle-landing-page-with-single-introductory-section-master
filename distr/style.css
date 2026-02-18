@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, p {
+  margin-block-start: 0;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  min-height: 100lvh;
+  overflow: hidden;
+  background-image: url(../images/bg-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: hsl(257, 40%, 49%);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: 40%;
+  align-self: flex-start;
+  margin-inline-start: 8%;
+  margin-block-start: 1.5rem;
+  margin-block-end: 3.5rem;
+  cursor: pointer;
+}
+.logo:hover {
+  opacity: 0.8;
+}
+
+.container {
+  width: 84%;
+  text-align: left;
+}
+.container .illustration {
+  margin-block-end: 3rem;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-block-end: 1.5rem;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.875rem 4.75rem;
+  font-family: inherit;
+  font-size: 12px;
+  color: hsl(257, 40%, 49%);
+  border: none;
+  border-radius: 24px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.411);
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+button:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+
+@media (min-width: 900px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-size: 100%;
+  }
+  .logo {
+    max-width: 15%;
+    margin-inline-start: 5.5%;
+    margin-block-start: 3.5rem;
+  }
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 89%;
+  }
+  .container .illustration {
+    width: 55%;
+  }
+  .container .text {
+    width: 40%;
+    margin-block-start: 3rem;
+  }
+  .container .text h1, .container .text p {
+    text-align: left;
+  }
+  .container .text h1 {
+    font-size: 40px;
+  }
+  .container .text p {
+    font-size: 17.5px;
+  }
+  .container .text button {
+    margin: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
