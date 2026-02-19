@@ -95,7 +95,7 @@ button:hover, button:focus {
   flex-direction: row;
   align-items: center;
 }
-.socials a {
+.socials__links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,14 +107,14 @@ button:hover, button:focus {
   margin-inline: 0.25rem;
   cursor: pointer;
 }
-.socials a i {
+.socials__links i {
   font-size: 1rem;
   color: white;
 }
-.socials a:hover {
+.socials__links:hover {
   border-color: hsl(300, 69%, 71%);
 }
-.socials a:hover i {
+.socials__links:hover i {
   color: hsl(300, 69%, 71%);
 }
 
