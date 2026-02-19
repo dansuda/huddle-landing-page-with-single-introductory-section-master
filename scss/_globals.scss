@@ -16,7 +16,7 @@ body {
     padding: 0;
 
     display: flex;
-    height: 100vh;
+    height: 100svh;
 
     background-image: url(../images/bg-mobile.svg);
     background-size: contain;
@@ -59,7 +59,7 @@ main {
         margin-inline: auto;
         margin-block-end: 4rem;
         width: 100%;
-        max-width: 500px;
+        max-width: 31.25rem;
     }
 }
 
@@ -85,12 +85,12 @@ button {
     padding: 0.75rem 4.75rem;
 
     font-family: inherit;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: $purple;
 
     border: none;
-    border-radius: 24px;
-    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.411);
+    border-radius: 1.5rem;
+    box-shadow: $buttonShadow;
 
     cursor: pointer;
     transition: background-color 200ms ease-in-out;
@@ -101,31 +101,55 @@ button {
     }
 }
 
+
+
 .socials {
     display: flex;
+    flex-direction: row;
+    align-items: center;
 
-    img {
-        width: clamp(35px, 8vw, 45px );
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+        width: clamp(1.875rem, 3vw, 2.5rem);
+        height: clamp(1.875rem, 3vw, 2.5rem);
+
+        border: 1px solid white;
+        border-radius: 50%;
+
         margin-inline: 0.25rem;
 
         cursor: pointer;
-        transition: opacity 200ms ease-in-out;
+        
+        i {
+            font-size: 1rem;
+            color: white;
+        }
 
         &:hover {
-            opacity: .8;
+            border-color: $magenta;
+
+            i {
+                color: $magenta;
+            }
         }
     }
 }
 
+    
 
-@media (min-width:800px) {
+
+@media (min-width:50rem) {
     body {
         background-size: cover;
     }
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5rem) {
 
     body {
         background-image: url(../images/bg-desktop.svg);
@@ -143,14 +167,11 @@ button {
     }
 
     main {
-        display: flex;
-        align-items: center;
-        max-width: 1280px;
+        max-width: 80rem;
         margin: 0 auto;
     }
 
     .container {
-        display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
@@ -160,7 +181,7 @@ button {
         .illustration {
             margin: 0;
             width: 55%;
-            max-width: 700px;
+            max-width: 43.75rem;
         }
 
         .text {
@@ -171,21 +192,25 @@ button {
                 text-align: left;
             }
             h1 {
-                font-size: 40px;
+                font-size: 2.5rem;
             }
             p {
-                font-size: 16px;
+                font-size: 1rem;
             }
             button {
                 margin: 0;
-                font-size: 16px;
+                font-size: 1rem;
             }
         }
     }
 
     .socials {
         align-self: flex-end;
-        margin-inline-end: 5.5%;
+        margin-inline-end: 4%;
         margin-block-start: 4rem;
+
+        a {
+            margin-inline: 0.5rem;
+        }
     }
 }
